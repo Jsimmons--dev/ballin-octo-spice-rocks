@@ -1,0 +1,9 @@
+body {
+  padding: 50px;
+}
+#firstName {
+  font-weight: 200;
+}
+#lastName {
+  font-weight: 400;
+}
