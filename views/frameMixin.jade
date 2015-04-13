@@ -8,14 +8,14 @@ mixin list
 	
 mixin boilerplate(boilerC)
 	div(class= boilerC)
-		p #{b1}
-		p #{b2}   
+		p.title #{b1}
+		p.title #{b2}   
 		p #{b3} 
 			a(href='#{feedbackButton}') View Feedback Here
-		p #{b4} 
-		p #{b5} 
+		p.title #{b4} 
+		p.title #{b5} 
 		p #{b6} 
-		p #{b7} 
+		p.title #{b7} 
 		p #{b8} 
 		p #{b9} 
 		p #{b10} 
@@ -50,13 +50,24 @@ mixin single(className)
 		div.yqzplugC
 			p #{yqzplug}
 				a.listings(href='#{yqzother}')  Click Here
-		div.titleC #{title} 
-		div.subtitleC #{subtitle}
-		div.descC #{description}
+		div.importantC
+			div.titleC #{title} 
+			div.subtitleC #{subtitle}
+			div.descC #{description}
 		ul.picsC  
 			img.picsi(src='#{pics}')
-		div.factsC #{facts}
+		div.factsC
+			div.facts #{facts}
+			div.factss1 #{factss1}
+			a.auctionsline(href='http://www.ebay.com/usr/estateauctioninc') #{auctionsline}
 			div.years #{years}
+		img.trader(src='http://pics.ebay.com/aw/pics/trading_assistant2_88x33.gif' width=88 height=33  vspace=5)
 		div.appletC #{applet}
+			object( classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=6,0,0,0" width="511" height="401" id="MSCMaps" align="")
+				param(name="movie" value="http://www.mystoremaps.com/flash/MyStoreMaps/MSCMaps.swf?SELLERID=734031&MOVIEPATH=http://www.mystoremaps.com/flash/MyStoreMaps/")
+				param(name="quality" value="high")
+				param(name="bgcolor" value="#FFFFFF")
+				embed(swliveconnect="true" name="MSCMaps" src="http://www.mystoremaps.com/flash/MyStoreMaps/MSCMaps.swf?SELLERID=734031&MOVIEPATH=http://www.mystoremaps.com/flash/MyStoreMaps/" quality="high" bgcolor="#FFFFFF"  width="511" height="401" align="" type="application/x-shockwave-flash" pluginspage="http://www.macromedia.com/go/getflashplayer")
 		+boilerplate('boilerC')
+			
 			

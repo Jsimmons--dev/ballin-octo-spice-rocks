@@ -14,12 +14,12 @@ title:'<?php echo $data-title; ?>'
 }
 
 //boilerplate
-var b1 = '*** OVER 30,000 POSITIVE FEEDBACKS (20,000+ UNIQUE) ***'; 
-var b2 = '*** OVER 40,000 SALES ON EBAY ***';
-var b3 = ' 100% Positive Feedback and we maintain a great rating - '; 
+var b1 = ' OVER 30,000 POSITIVE FEEDBACKS (20,000+ UNIQUE)'; 
+var b2 = 'OVER 40,000 SALES ON EBAY';
+var b3 = '100% Positive Feedback and we maintain a great rating'; 
 var feedbackButton = 'http://feedback.ebay.com/ws/eBayISAPI.dll?ViewFeedback2&userid=estateauctionsinc&&_trksid=p4340.l2560&rt=nc&iid=290762637397&sspagename=VIP:feedback&ftab=FeedbackAsSeller'; 
 
-var b4 = '*** OVER 10,000 REPEAT BUYERS ***';
+var b4 = 'OVER 10,000 REPEAT BUYERS';
 var b5 = 'YOU CAN BID WITH CONFIDENCE!!';
 var b6 ="Please note: We put up a very ecclectic collection of items and are not experts in every area, so descriptions are our best guess as to what something is. While we try to research each item to the best of our ability, it is the buyer's responsibility to know what they are buying.";
 var b7 = 'TERMS OF SERVICE';
@@ -58,9 +58,11 @@ title:'Mid Century Modern American Geometric Abstact Oil Painting SIGNED Paster'
 subtitle: 'Pennsylvania Artist from Bala Cynwld PA',
 description:' In this auction, we have a mid century modern geometric abstract serigraph by Pennsylvania artist ,L Paster. The artist uses bold, contrasting colors and precise lines to create depth. The design is futuristic, in line with what was popular at the time of the space age. The signature of the artist is found on the bottom left, "Paster." The back has the address info for the artist, in Bala Cynwyd, PA.',
 pics:'http://201503.estateauctionpics.com/20150326165101_4.jpg',
-facts:'facts',
-years:'17',
-applet:'applet',
+facts:'FACTS ABOUT ESTATEAUCTIONSINC',
+factss1:'(Norb & Marie Novocin)',
+auctionsline:'Estate Auctions, Inc.',
+years:'In our 17th year on Ebay!',
+applet:'',
 b1 : b1,b2 : b2,b3 : b3,feedbackButton : feedbackButton,b4 : b4,b5 : b5,b6 : b6,b7 : b7,b8 : b8,b9 : b9,b10 : b10,b11 : b11,b12 : b12,b13 : b13,b14 : b14,b15 : b15,b16 : b16,b17 : b17,b18 : b18,b19 : b19,b20 : b20,b21 : b21,b22 : b22,b23 : b23,b24 : b24,b25 : b25,b26 : b26,b27 : b27,b28 : b28,b29 : b29,
 logoC:'logoC1',
 bookC: 'bookC1',
