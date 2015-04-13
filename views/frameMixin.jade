@@ -6,19 +6,57 @@ mixin list
 		li foo
 		li bar
 	
+mixin boilerplate(boilerC)
+	div(class= boilerC)
+		p #{b1}
+		p #{b2}   
+		p #{b3} 
+			a(href='#{feedbackButton}') View Feedback Here
+		p #{b4} 
+		p #{b5} 
+		p #{b6} 
+		p #{b7} 
+		p #{b8} 
+		p #{b9} 
+		p #{b10} 
+		p #{b11} 
+		p.title #{b12} 
+		p #{b13} 
+		p.title #{b14} 
+		p #{b15} 
+		p.title #{b16} 
+		p #{b17} 
+		p.title #{b18} 
+		p #{b19} 
+		p.title #{b20} 
+		p #{b21} 
+		p.title #{b22} 
+		p #{b23} 
+		p.title #{b24} 
+		p #{b25} 
+		p.title #{b26} 
+		p #{b27} 
+		p.title #{b28} 
+		p #{b29} 
 
-mixin single
-	div.logo
-	div.welcome
-	div.yqzplug
-	div#title1
-	div#subtitle1
-	div#description1
-	div#pics1
-	div#facts1
-		div#beforeYears1
-		div#years
-		div#afterYears1
-	div#applet1
-	div#boilerPlate1
-	
+
+mixin single(className)
+	div(class= className)
+		img.logoC(src='#{logo}')
+		img.bookC(src='#{book}')
+		div.welcomeC 
+			p.welcomeTitle #{welcomeTextTitle}
+			p #{welcomeTextBody}
+		div.yqzplugC
+			p #{yqzplug}
+				a.listings(href='#{yqzother}')  Click Here
+		div.titleC #{title} 
+		div.subtitleC #{subtitle}
+		div.descC #{description}
+		ul.picsC  
+			img.picsi(src='#{pics}')
+		div.factsC #{facts}
+			div.years #{years}
+		div.appletC #{applet}
+		+boilerplate('boilerC')
+			
