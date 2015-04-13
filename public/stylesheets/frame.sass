@@ -1,0 +1,77 @@
+@import bourbon/bourbon
+@import neat/neat
+$parchment: #fefcaf
+$dark-parchment :#e68a00
+$brown-text: #522900
+$white: #FFFFFF
+$span: 10
+$col-max: 12
+$extra: ($col-max - $span)/2
+$width: 996px
+$pad-between: 10px
+$boiler-pad: 30px 
+
+=fix-size
+	+shift($extra)
+	+span-columns($span of $col-max)
+	+pad($pad-between 0 $pad-between 0)
+=bolden
+	font-weight: bold
+	font-size: 22px
+	+pad($boiler-pad 0 0 0)
+
+=title
+	font-weight: bold
+	font-size: 30px	
+
+.example1
+	color: $brown-text
+	background-color: $parchment
+	+linear-gradient($dark-parchment,$parchment 8%,$parchment 99% ,$dark-parchment,$fallback: $parchment)
+	text-align: center
+	font-size: 20px
+	+span-columns($col-max)
+	width: $width
+	font-family: "Trebuchet MS", Helvetica, sans-serif
+	font-weight: lighter
+	.welcomeC
+		.welcomeTitle
+			+bolden
+		+fix-size
+	+row()	
+	.yqzplugC
+		+bolden
+		.listings
+			+pad(10px)
+			font-size: 22px
+			+row()
+		+fix-size
+	+row()
+	.titleC
+		+linear-gradient($dark-parchment, $white 15%, $white 85%, $dark-parchment, $fallback: $dark-parchment)
+		border-radius: 20px
+		+title
+		+fix-size
+	+row()
+	.subtitleC
+		+title
+		+fix-size
+	+row()
+	.descC
+		+fix-size
+	+row()
+	.picsC
+		+fix-size
+	+row()
+	.factsC
+		+fix-size
+	+row()
+	.appletC
+		+fix-size
+	+row()
+	.boilerC
+		.title
+			+bolden
+		+fix-size
+	+pad(0 0 $boiler-pad 0)
+

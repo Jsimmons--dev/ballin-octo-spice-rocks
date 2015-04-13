@@ -1,2 +1,5 @@
 /node_modules/*
 /.scripts/*
+/public/stylesheets/bourbon/*
+/public/stylesheets/neat/*
+/.sass-cache/*

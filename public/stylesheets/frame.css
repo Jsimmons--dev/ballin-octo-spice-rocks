@@ -1,0 +1,174 @@
+html {
+  box-sizing: border-box; }
+
+*, *::after, *::before {
+  box-sizing: inherit; }
+
+.example1 {
+  color: #522900;
+  background-color: #fefcaf;
+  background-color: #fefcaf;
+  background-image: -webkit-linear-gradient(#e68a00, #fefcaf 8%, #fefcaf 99%, #e68a00);
+  background-image: linear-gradient(#e68a00, #fefcaf 8%, #fefcaf 99%, #e68a00);
+  text-align: center;
+  font-size: 20px;
+  float: left;
+  display: block;
+  margin-right: 2.35765%;
+  width: 100%;
+  width: 996px;
+  font-family: "Trebuchet MS", Helvetica, sans-serif;
+  font-weight: lighter;
+  display: block;
+  display: block;
+  display: block;
+  display: block;
+  display: block;
+  display: block;
+  display: block;
+  display: block;
+  padding: 0 0 30px 0; }
+  .example1:last-child {
+    margin-right: 0; }
+  .example1 .welcomeC {
+    margin-left: 8.5298%;
+    float: left;
+    display: block;
+    margin-right: 2.35765%;
+    width: 82.94039%;
+    padding: 10px 0 10px 0; }
+    .example1 .welcomeC .welcomeTitle {
+      font-weight: bold;
+      font-size: 22px;
+      padding: 30px 0 0 0; }
+    .example1 .welcomeC:last-child {
+      margin-right: 0; }
+  .example1::after {
+    clear: both;
+    content: "";
+    display: table; }
+  .example1 .yqzplugC {
+    font-weight: bold;
+    font-size: 22px;
+    padding: 30px 0 0 0;
+    margin-left: 8.5298%;
+    float: left;
+    display: block;
+    margin-right: 2.35765%;
+    width: 82.94039%;
+    padding: 10px 0 10px 0; }
+    .example1 .yqzplugC .listings {
+      padding: 10px;
+      font-size: 22px;
+      display: block; }
+      .example1 .yqzplugC .listings::after {
+        clear: both;
+        content: "";
+        display: table; }
+    .example1 .yqzplugC:last-child {
+      margin-right: 0; }
+  .example1::after {
+    clear: both;
+    content: "";
+    display: table; }
+  .example1 .titleC {
+    background-color: #e68a00;
+    background-image: -webkit-linear-gradient(#e68a00, #FFFFFF 15%, #FFFFFF 85%, #e68a00);
+    background-image: linear-gradient(#e68a00, #FFFFFF 15%, #FFFFFF 85%, #e68a00);
+    border-radius: 20px;
+    font-weight: bold;
+    font-size: 30px;
+    margin-left: 8.5298%;
+    float: left;
+    display: block;
+    margin-right: 2.35765%;
+    width: 82.94039%;
+    padding: 10px 0 10px 0; }
+    .example1 .titleC:last-child {
+      margin-right: 0; }
+  .example1::after {
+    clear: both;
+    content: "";
+    display: table; }
+  .example1 .subtitleC {
+    font-weight: bold;
+    font-size: 30px;
+    margin-left: 8.5298%;
+    float: left;
+    display: block;
+    margin-right: 2.35765%;
+    width: 82.94039%;
+    padding: 10px 0 10px 0; }
+    .example1 .subtitleC:last-child {
+      margin-right: 0; }
+  .example1::after {
+    clear: both;
+    content: "";
+    display: table; }
+  .example1 .descC {
+    margin-left: 8.5298%;
+    float: left;
+    display: block;
+    margin-right: 2.35765%;
+    width: 82.94039%;
+    padding: 10px 0 10px 0; }
+    .example1 .descC:last-child {
+      margin-right: 0; }
+  .example1::after {
+    clear: both;
+    content: "";
+    display: table; }
+  .example1 .picsC {
+    margin-left: 8.5298%;
+    float: left;
+    display: block;
+    margin-right: 2.35765%;
+    width: 82.94039%;
+    padding: 10px 0 10px 0; }
+    .example1 .picsC:last-child {
+      margin-right: 0; }
+  .example1::after {
+    clear: both;
+    content: "";
+    display: table; }
+  .example1 .factsC {
+    margin-left: 8.5298%;
+    float: left;
+    display: block;
+    margin-right: 2.35765%;
+    width: 82.94039%;
+    padding: 10px 0 10px 0; }
+    .example1 .factsC:last-child {
+      margin-right: 0; }
+  .example1::after {
+    clear: both;
+    content: "";
+    display: table; }
+  .example1 .appletC {
+    margin-left: 8.5298%;
+    float: left;
+    display: block;
+    margin-right: 2.35765%;
+    width: 82.94039%;
+    padding: 10px 0 10px 0; }
+    .example1 .appletC:last-child {
+      margin-right: 0; }
+  .example1::after {
+    clear: both;
+    content: "";
+    display: table; }
+  .example1 .boilerC {
+    margin-left: 8.5298%;
+    float: left;
+    display: block;
+    margin-right: 2.35765%;
+    width: 82.94039%;
+    padding: 10px 0 10px 0; }
+    .example1 .boilerC .title {
+      font-weight: bold;
+      font-size: 22px;
+      padding: 30px 0 0 0; }
+    .example1 .boilerC:last-child {
+      margin-right: 0; }
+
+/*# sourceMappingURL=frame.css.map */
