@@ -233,608 +233,63 @@ html {
   .pics-grid .grid-item-bigger p {
     max-width: 60%; } }
 
-.example1 {
-  color: #522900;
-  background-color: #fefcaf;
-  background-image: -webkit-linear-gradient(#e68a00, #fefcaf 8%, #fefcaf 99%, #e68a00);
-  background-image: linear-gradient(#e68a00, #fefcaf 8%, #fefcaf 99%, #e68a00);
-  text-align: center;
+body {
   font-size: 20px;
-  float: left;
-  display: block;
-  margin-right: 2.35765%;
-  width: 100%;
-  width: 996px;
   font-family: "Trebuchet MS", Helvetica, sans-serif;
   font-weight: lighter;
-  display: block;
-  display: block;
-  display: block;
-  display: block;
-  display: block;
-  display: block;
-  display: block;
-  padding: 0 0 30px 0; }
-  .example1 .footer {
-    background: #40526b;
-    padding: 0.5em 1.618em;
-    width: 100%; }
-    .example1 .footer .footer-logo {
-      margin-bottom: 2em;
-      text-align: center; }
-      .example1 .footer .footer-logo img {
-        height: auto; }
-    .example1 .footer ul {
-      margin-bottom: 0.5em;
-      padding: 0; }
-      @media screen and (min-width: 40em) {
-        .example1 .footer ul::after {
-          clear: both;
-          content: "";
-          display: table; } }
-    .example1 .footer li {
-      line-height: 1.5em;
-      list-style: none;
-      text-align: center; }
-    .example1 .footer li a {
-      color: rgba(255, 255, 255, 0.4);
-      text-decoration: none; }
-      .example1 .footer li a:focus, .example1 .footer li a:hover {
-        color: white; }
-    .example1 .footer li h3 {
-      color: white;
-      font-size: 1em;
-      font-weight: 800;
-      margin-bottom: 0.4em; }
-    .example1 .footer hr {
-      border: 1px solid rgba(255, 255, 255, 0.1);
-      margin: 0 auto 0.5em;
-      width: 12em; }
-    .example1 .footer p {
-      color: rgba(255, 255, 255, 0.4);
-      font-size: 0.9em;
-      line-height: 1.5em;
-      margin: auto;
-      max-width: 35em;
-      text-align: center; }
-  .example1:last-child {
-    margin-right: 0; }
-  .example1 .welcomeC {
-    margin-left: 8.5298%;
-    float: left;
-    display: block;
-    margin-right: 2.35765%;
-    width: 82.94039%;
-    padding: 10px 0 10px 0; }
-    .example1 .welcomeC .welcomeTitle {
-      font-weight: bold;
-      font-size: 40px; }
-    .example1 .welcomeC:last-child {
-      margin-right: 0; }
-  .example1::after {
-    clear: both;
-    content: "";
-    display: table; }
-  .example1 .yqzplugC {
-    font-weight: bold;
-    font-size: 22px;
-    padding: 30px 0 0 0;
-    margin-left: 8.5298%;
-    float: left;
-    display: block;
-    margin-right: 2.35765%;
-    width: 82.94039%;
-    padding: 10px 0 10px 0; }
-    .example1 .yqzplugC .listings {
-      padding: 10px;
-      font-size: 22px; }
-    .example1 .yqzplugC:last-child {
-      margin-right: 0; }
-  .example1::after {
-    clear: both;
-    content: "";
-    display: table; }
-  .example1 .importantC {
-    color: #522900;
-    background-color: #fefcaf;
-    background-image: -webkit-linear-gradient(#e68a00, #fefcaf 5%, #fefcaf 95%, #e68a00);
-    background-image: linear-gradient(#e68a00, #fefcaf 5%, #fefcaf 95%, #e68a00);
-    border-radius: 20px;
-    border-style: double;
-    margin-left: 8.5298%;
-    float: left;
-    display: block;
-    margin-right: 2.35765%;
-    width: 82.94039%;
-    padding: 10px 0 10px 0;
-    border-width: 7px;
-    border-color: #e68a00;
-    display: block;
-    display: block; }
-    .example1 .importantC:last-child {
-      margin-right: 0; }
-    .example1 .importantC .titleC {
-      font-weight: bold;
-      font-size: 30px;
-      margin-left: 8.5298%;
-      float: left;
-      display: block;
-      margin-right: 2.35765%;
-      width: 82.94039%;
-      padding: 10px 0 10px 0;
-      border-bottom: thin solid #522900; }
-      .example1 .importantC .titleC:last-child {
-        margin-right: 0; }
-    .example1 .importantC::after {
-      clear: both;
-      content: "";
-      display: table; }
-    .example1 .importantC .subtitleC {
-      font-weight: bold;
-      font-size: 30px;
-      padding: 0 0 30px;
-      margin-left: 8.5298%;
-      float: left;
-      display: block;
-      margin-right: 2.35765%;
-      width: 82.94039%;
-      padding: 10px 0 10px 0;
-      display: block; }
-      .example1 .importantC .subtitleC:last-child {
-        margin-right: 0; }
-      .example1 .importantC .subtitleC::after {
-        clear: both;
-        content: "";
-        display: table; }
-    .example1 .importantC .descC {
-      margin-left: 8.5298%;
-      float: left;
-      display: block;
-      margin-right: 2.35765%;
-      width: 82.94039%;
-      padding: 10px 0 10px 0; }
-      .example1 .importantC .descC:last-child {
-        margin-right: 0; }
-    .example1 .importantC::after {
-      clear: both;
-      content: "";
-      display: table; }
-  .example1 .picsC {
-    margin-left: 8.5298%;
-    float: left;
-    display: block;
-    margin-right: 2.35765%;
-    width: 82.94039%;
-    padding: 10px 0 10px 0; }
-    .example1 .picsC:last-child {
-      margin-right: 0; }
-  .example1::after {
-    clear: both;
-    content: "";
-    display: table; }
-  .example1 .factsC {
-    display: block;
-    display: block;
-    display: block; }
-    .example1 .factsC .facts {
-      font-weight: bold;
-      font-size: 30px;
-      margin-left: 8.5298%;
-      float: left;
-      display: block;
-      margin-right: 2.35765%;
-      width: 82.94039%;
-      padding: 10px 0 10px 0; }
-      .example1 .factsC .facts:last-child {
-        margin-right: 0; }
-    .example1 .factsC::after {
-      clear: both;
-      content: "";
-      display: table; }
-    .example1 .factsC .factss1 {
-      font-weight: bold;
-      font-size: 30px;
-      margin-left: 8.5298%;
-      float: left;
-      display: block;
-      margin-right: 2.35765%;
-      width: 82.94039%;
-      padding: 10px 0 10px 0; }
-      .example1 .factsC .factss1:last-child {
-        margin-right: 0; }
-    .example1 .factsC::after {
-      clear: both;
-      content: "";
-      display: table; }
-    .example1 .factsC .auctionsline {
-      font-weight: bold;
-      font-size: 30px;
-      margin-left: 8.5298%;
-      float: left;
-      display: block;
-      margin-right: 2.35765%;
-      width: 82.94039%;
-      padding: 10px 0 10px 0; }
-      .example1 .factsC .auctionsline:last-child {
-        margin-right: 0; }
-    .example1 .factsC::after {
-      clear: both;
-      content: "";
-      display: table; }
-    .example1 .factsC .years {
-      font-weight: bold;
-      font-size: 30px;
-      margin-left: 8.5298%;
-      float: left;
-      display: block;
-      margin-right: 2.35765%;
-      width: 82.94039%;
-      padding: 10px 0 10px 0; }
-      .example1 .factsC .years:last-child {
-        margin-right: 0; }
-  .example1::after {
-    clear: both;
-    content: "";
-    display: table; }
-  .example1 .traderpic {
-    margin-left: 8.5298%;
-    float: left;
-    display: block;
-    margin-right: 2.35765%;
-    width: 82.94039%;
-    padding: 10px 0 10px 0; }
-    .example1 .traderpic:last-child {
-      margin-right: 0; }
-  .example1::after {
-    clear: both;
-    content: "";
-    display: table; }
-  .example1 .appletC {
-    margin-left: 8.5298%;
-    float: left;
-    display: block;
-    margin-right: 2.35765%;
-    width: 82.94039%;
-    padding: 10px 0 10px 0; }
-    .example1 .appletC:last-child {
-      margin-right: 0; }
-  .example1::after {
-    clear: both;
-    content: "";
-    display: table; }
-  .example1 .tos {
-    margin-left: 8.5298%;
-    float: left;
-    display: block;
-    margin-right: 2.35765%;
-    width: 82.94039%;
-    padding: 10px 0 10px 0; }
-    .example1 .tos:last-child {
-      margin-right: 0; }
-  .example1::after {
-    clear: both;
-    content: "";
-    display: table; }
-  .example1 .boilerC {
-    margin-left: 8.5298%;
-    float: left;
-    display: block;
-    margin-right: 2.35765%;
-    width: 82.94039%;
-    padding: 10px 0 10px 0; }
-    .example1 .boilerC .title {
-      font-weight: bold;
-      font-size: 22px;
-      padding: 30px 0 0 0; }
-    .example1 .boilerC:last-child {
-      margin-right: 0; }
-
-.example2 {
-  color: #3d3d29;
-  background-color: white;
-  background-image: -webkit-linear-gradient(#527a7a, white 8%, white 99%, #527a7a);
-  background-image: linear-gradient(#527a7a, white 8%, white 99%, #527a7a);
-  text-align: center;
-  font-size: 20px;
-  float: left;
-  display: block;
-  margin-right: 2.35765%;
-  width: 100%;
-  width: 996px;
-  font-family: "Trebuchet MS", Helvetica, sans-serif;
-  font-weight: lighter;
-  display: block;
-  display: block;
-  display: block;
-  display: block;
-  display: block;
-  display: block;
-  display: block;
-  padding: 0 0 30px 0;
   width: 100%; }
-  .example2 .footer {
+  body .footer {
     background: #40526b;
     padding: 0.5em 1.618em;
     width: 100%; }
-    .example2 .footer .footer-logo {
+    body .footer .footer-logo {
       margin-bottom: 2em;
       text-align: center; }
-      .example2 .footer .footer-logo img {
+      body .footer .footer-logo img {
         height: auto; }
-    .example2 .footer ul {
+    body .footer ul {
       margin-bottom: 0.5em;
       padding: 0; }
       @media screen and (min-width: 40em) {
-        .example2 .footer ul::after {
+        body .footer ul::after {
           clear: both;
           content: "";
           display: table; } }
-    .example2 .footer li {
+    body .footer li {
       line-height: 1.5em;
       list-style: none;
       text-align: center; }
-    .example2 .footer li a {
+    body .footer li a {
       color: rgba(255, 255, 255, 0.4);
       text-decoration: none; }
-      .example2 .footer li a:focus, .example2 .footer li a:hover {
+      body .footer li a:focus, body .footer li a:hover {
         color: white; }
-    .example2 .footer li h3 {
+    body .footer li h3 {
       color: white;
       font-size: 1em;
       font-weight: 800;
       margin-bottom: 0.4em; }
-    .example2 .footer hr {
+    body .footer hr {
       border: 1px solid rgba(255, 255, 255, 0.1);
       margin: 0 auto 0.5em;
       width: 12em; }
-    .example2 .footer p {
+    body .footer p {
       color: rgba(255, 255, 255, 0.4);
       font-size: 0.9em;
       line-height: 1.5em;
       margin: auto;
       max-width: 35em;
       text-align: center; }
-  .example2:last-child {
-    margin-right: 0; }
-  .example2 .welcomeC {
-    margin-left: 8.5298%;
-    float: left;
-    display: block;
-    margin-right: 2.35765%;
-    width: 82.94039%;
-    padding: 10px 0 10px 0; }
-    .example2 .welcomeC .welcomeTitle {
-      font-weight: bold;
-      font-size: 40px; }
-    .example2 .welcomeC:last-child {
-      margin-right: 0; }
-  .example2::after {
-    clear: both;
-    content: "";
-    display: table; }
-  .example2 .yqzplugC {
-    font-weight: bold;
-    font-size: 22px;
-    padding: 30px 0 0 0;
-    margin-left: 8.5298%;
-    float: left;
-    display: block;
-    margin-right: 2.35765%;
-    width: 82.94039%;
-    padding: 10px 0 10px 0; }
-    .example2 .yqzplugC .listings {
-      padding: 10px;
-      font-size: 22px; }
-    .example2 .yqzplugC:last-child {
-      margin-right: 0; }
-  .example2::after {
-    clear: both;
-    content: "";
-    display: table; }
-  .example2 .importantC {
-    color: #522900;
-    background-color: #fefcaf;
-    background-image: -webkit-linear-gradient(#e68a00, #fefcaf 5%, #fefcaf 95%, #e68a00);
-    background-image: linear-gradient(#e68a00, #fefcaf 5%, #fefcaf 95%, #e68a00);
-    border-radius: 20px;
-    border-style: double;
-    margin-left: 8.5298%;
-    float: left;
-    display: block;
-    margin-right: 2.35765%;
-    width: 82.94039%;
-    padding: 10px 0 10px 0;
-    border-width: 7px;
-    border-color: #e68a00;
-    display: block;
-    display: block; }
-    .example2 .importantC:last-child {
-      margin-right: 0; }
-    .example2 .importantC .titleC {
-      font-weight: bold;
-      font-size: 30px;
-      margin-left: 8.5298%;
-      float: left;
-      display: block;
-      margin-right: 2.35765%;
-      width: 82.94039%;
-      padding: 10px 0 10px 0;
-      border-bottom: thin solid #3d3d29; }
-      .example2 .importantC .titleC:last-child {
-        margin-right: 0; }
-    .example2 .importantC::after {
-      clear: both;
-      content: "";
-      display: table; }
-    .example2 .importantC .subtitleC {
-      font-weight: bold;
-      font-size: 30px;
-      padding: 0 0 30px;
-      margin-left: 8.5298%;
-      float: left;
-      display: block;
-      margin-right: 2.35765%;
-      width: 82.94039%;
-      padding: 10px 0 10px 0;
-      display: block; }
-      .example2 .importantC .subtitleC:last-child {
-        margin-right: 0; }
-      .example2 .importantC .subtitleC::after {
-        clear: both;
-        content: "";
-        display: table; }
-    .example2 .importantC .descC {
-      margin-left: 8.5298%;
-      float: left;
-      display: block;
-      margin-right: 2.35765%;
-      width: 82.94039%;
-      padding: 10px 0 10px 0; }
-      .example2 .importantC .descC:last-child {
-        margin-right: 0; }
-    .example2 .importantC::after {
-      clear: both;
-      content: "";
-      display: table; }
-  .example2 .picsC {
-    margin-left: 8.5298%;
-    float: left;
-    display: block;
-    margin-right: 2.35765%;
-    width: 82.94039%;
-    padding: 10px 0 10px 0; }
-    .example2 .picsC:last-child {
-      margin-right: 0; }
-  .example2::after {
-    clear: both;
-    content: "";
-    display: table; }
-  .example2 .factsC {
-    display: block;
-    display: block;
-    display: block; }
-    .example2 .factsC .facts {
-      font-weight: bold;
-      font-size: 30px;
-      margin-left: 8.5298%;
-      float: left;
-      display: block;
-      margin-right: 2.35765%;
-      width: 82.94039%;
-      padding: 10px 0 10px 0; }
-      .example2 .factsC .facts:last-child {
-        margin-right: 0; }
-    .example2 .factsC::after {
-      clear: both;
-      content: "";
-      display: table; }
-    .example2 .factsC .factss1 {
-      font-weight: bold;
-      font-size: 30px;
-      margin-left: 8.5298%;
-      float: left;
-      display: block;
-      margin-right: 2.35765%;
-      width: 82.94039%;
-      padding: 10px 0 10px 0; }
-      .example2 .factsC .factss1:last-child {
-        margin-right: 0; }
-    .example2 .factsC::after {
-      clear: both;
-      content: "";
-      display: table; }
-    .example2 .factsC .auctionsline {
-      font-weight: bold;
-      font-size: 30px;
-      margin-left: 8.5298%;
-      float: left;
-      display: block;
-      margin-right: 2.35765%;
-      width: 82.94039%;
-      padding: 10px 0 10px 0; }
-      .example2 .factsC .auctionsline:last-child {
-        margin-right: 0; }
-    .example2 .factsC::after {
-      clear: both;
-      content: "";
-      display: table; }
-    .example2 .factsC .years {
-      font-weight: bold;
-      font-size: 30px;
-      margin-left: 8.5298%;
-      float: left;
-      display: block;
-      margin-right: 2.35765%;
-      width: 82.94039%;
-      padding: 10px 0 10px 0; }
-      .example2 .factsC .years:last-child {
-        margin-right: 0; }
-  .example2::after {
-    clear: both;
-    content: "";
-    display: table; }
-  .example2 .traderpic {
-    margin-left: 8.5298%;
-    float: left;
-    display: block;
-    margin-right: 2.35765%;
-    width: 82.94039%;
-    padding: 10px 0 10px 0; }
-    .example2 .traderpic:last-child {
-      margin-right: 0; }
-  .example2::after {
-    clear: both;
-    content: "";
-    display: table; }
-  .example2 .appletC {
-    margin-left: 8.5298%;
-    float: left;
-    display: block;
-    margin-right: 2.35765%;
-    width: 82.94039%;
-    padding: 10px 0 10px 0; }
-    .example2 .appletC:last-child {
-      margin-right: 0; }
-  .example2::after {
-    clear: both;
-    content: "";
-    display: table; }
-  .example2 .tos {
-    margin-left: 8.5298%;
-    float: left;
-    display: block;
-    margin-right: 2.35765%;
-    width: 82.94039%;
-    padding: 10px 0 10px 0; }
-    .example2 .tos:last-child {
-      margin-right: 0; }
-  .example2::after {
-    clear: both;
-    content: "";
-    display: table; }
-  .example2 .boilerC {
-    margin-left: 8.5298%;
-    float: left;
-    display: block;
-    margin-right: 2.35765%;
-    width: 82.94039%;
-    padding: 10px 0 10px 0; }
-    .example2 .boilerC .title {
-      font-weight: bold;
-      font-size: 22px;
-      padding: 30px 0 0 0; }
-    .example2 .boilerC:last-child {
-      margin-right: 0; }
-  .example2 .button-group {
+  body .button-group {
     display: inline-block; }
-    .example2 .button-group input {
+    body .button-group input {
       display: none; }
-    .example2 .button-group label {
+    body .button-group label {
       margin-bottom: 0; }
       @media screen and (min-width: 53.75em) {
-        .example2 .button-group label {
+        body .button-group label {
           float: left; } }
-      .example2 .button-group label .button-group-item {
+      body .button-group label .button-group-item {
         background: white;
         border-left: 1px solid silver;
         border-radius: 0;
@@ -848,35 +303,35 @@ html {
         padding: 0.75em 1em;
         width: 100%; }
         @media screen and (min-width: 53.75em) {
-          .example2 .button-group label .button-group-item {
+          body .button-group label .button-group-item {
             border-bottom: 1px solid silver;
             border-left: 0;
             border-right: 1px solid #eeeeee;
             border-top: 1px solid silver;
             width: auto; } }
-        .example2 .button-group label .button-group-item:focus, .example2 .button-group label .button-group-item:hover {
+        body .button-group label .button-group-item:focus, body .button-group label .button-group-item:hover {
           background-color: #f7f7f7; }
-      .example2 .button-group label:first-child .button-group-item {
+      body .button-group label:first-child .button-group-item {
         border-top-left-radius: 3px;
         border-top-right-radius: 3px;
         border-top: 1px solid silver; }
         @media screen and (min-width: 53.75em) {
-          .example2 .button-group label:first-child .button-group-item {
+          body .button-group label:first-child .button-group-item {
             border-bottom-left-radius: 3px;
             border-left: 1px solid silver;
             border-top-left-radius: 3px;
             border-top-right-radius: 0; } }
-      .example2 .button-group label:last-child .button-group-item {
+      body .button-group label:last-child .button-group-item {
         border-bottom-left-radius: 3px;
         border-bottom-right-radius: 3px;
         border-bottom: 1px solid silver; }
         @media screen and (min-width: 53.75em) {
-          .example2 .button-group label:last-child .button-group-item {
+          body .button-group label:last-child .button-group-item {
             border-bottom-left-radius: 0;
             border-bottom-right-radius: 3px;
             border-right: 1px solid silver;
             border-top-right-radius: 3px; } }
-      .example2 .button-group label input:checked + .button-group-item {
+      body .button-group label input:checked + .button-group-item {
         background: #477dca;
         border: 1px solid #2c5999;
         box-shadow: inset 0 1px 2px #3264ac;

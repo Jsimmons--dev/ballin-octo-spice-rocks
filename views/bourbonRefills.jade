@@ -12,18 +12,17 @@ mixin gridlike(id)
 mixin gridItems(id)
     .grid-items
       a.grid-item.grid-item-bigger(href='javascript:void(0)')
-        h1 #{title}
-        p #{subtitle}
+        h1 !{title}
+        p !{subtitle}
       a.grid-item.grid-item-half(href='javascript:void(0)')
-        p #{description}
-      #{pics}
-      img.grid-item.grid-item-half(src='#{pics}')
+        p !{description}
+      img.grid-item.grid-item-half(src!= pics)
       img.grid-item.grid-item-half(src='#{pics}')
       img.grid-item.grid-item-half(src='#{pics}')
       a.grid-item.grid-item-bigger(href='javascript:void(0)')
         h1 #{facts}
         h1 #{factss1}
-        h1 In our #{years}th year on Ebay!
+        h1 This is our !{years}th year on EBay!
         h1 #{b2}
         h1 #{auctionsline} 
         h1 #{b1}
