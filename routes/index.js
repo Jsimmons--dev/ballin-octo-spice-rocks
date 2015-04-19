@@ -44,7 +44,7 @@ var b24='SEVEN - Shipping Time Frame';
 var b25='We make every effort to ship in a timely manner. We are home schooling the boys, listing tons of items, and as like any of us are just plain swamped, so we have to schedule a special time to pack and ship. We ship on a first paid, first shipped basis. (We do not ship any item until it has been paid and the funds have cleared.) With the ebb and flow of payments we manage to get everything out of the door within one week. If there is a rush, we will make every effort to work with you in getting it out of the door faster. As you can see from our feedback, we do not disappoint. OF COURSE, items that need special attention, crating, etc adds to the time frame of those items. ';
 var b26='EIGHT  - Local Pickup';
 var b27="Sometimes it makes sense to come by and pickup your items.  Sometimes an item is just too big for any other option.  If you've arranged local pickup with us, you must pickup the item within 30 days otherwise it will be subject to storage fees or relisting.";
-var b28='Finally, NINE  - Communication';
+var b28='NINE  - Communication';
 var b29='Please feel free to contact us at anytime, with any question or comment. Unless we are out of town we make an effort to answer all emails as quickly as possible.';
 
 var exampleParams = {
@@ -56,7 +56,7 @@ yqzplug:'We are "Your Quality Zone" - search "YQZ" to see our other listings',
 yqzother:'http://www.ebay.com/sch/estateauctionsinc/m.html?hash=item43b2cdc055&item=290762637397&pt=Art_Paintings&rt=nc&_trksid=p4340.l2562',
 title:'Mid Century Modern American Geometric Abstact Oil Painting SIGNED Paster',
 subtitle: 'Pennsylvania Artist from Bala Cynwld PA',
-description:' In this auction, we have a mid century modern geometric abstract serigraph by Pennsylvania artist ,L Paster. The artist uses bold, contrasting colors and precise lines to create depth. The design is futuristic, in line with what was popular at the time of the space age. The signature of the artist is found on the bottom left, "Paster." The back has the address info for the artist, in Bala Cynwyd, PA.',
+description:' In this auction, we have a mid century modern geometric abstract serigraph by Pennsylvania artist ,L Paster. The artist uses bold, contrasting colors and precise lines to create depth. The design is futuristic, in line with what was popular at the time of the space age. The signature of the artist is found on the bottom left, "Paster." The back has the address info for the artist, in Bala Cynwyd, PA.', 
 pics:'http://201503.estateauctionpics.com/20150326165101_4.jpg',
 facts:'FACTS ABOUT ESTATEAUCTIONSINC',
 factss1:'(Norb & Marie Novocin)',

@@ -1,6 +1,6 @@
 <?php echo $data->title; ?> title of item, set in title of doc and display
 <?php echo $data->subtitle; ?> second line
-<?php echo $data->extra_html; ?> hook thats empty right now ask andy
+<?php echo $data->extra_html; ?> hooks for additional content like urls
 <?php echo $data->pic_urls; ?> the pics loaded in a column
 <?php echo $data->numPhotos; ?> num of photos
 <?php echo $data->description; ?> the expensive desc

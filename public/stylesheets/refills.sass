@@ -1,0 +1,335 @@
+=hero-panel
+  .hero
+    $base-border-radius: 3px !default
+    $action-color: #477dca !default
+    $large-screen: em(860) !default
+    $hero-background-top: #7f99be
+    $hero-background-bottom: #20392b
+    $hero-color: white
+    $gradient-angle: 10deg
+    background-color: #324766
+    background-position: top
+    background-repeat: no-repeat
+    background-size: cover
+    padding-bottom: 3em
+    .hero-logo img
+      height: 4em
+      margin-bottom: 1em
+    .hero-inner
+      +outer-container
+      +clearfix
+      color: $hero-color
+      margin: auto
+      padding: 3.5em
+      text-align: center
+      .hero-copy
+        text-align: center
+        h1
+          font-size: 1.6em
+          margin-bottom: 0.5em
+          +media($large-screen)
+            font-size: 1.8em
+        p
+          font-weight: 200
+          line-height: 1.4em
+          margin: 0 auto 3em auto
+            font-size: 1.1em
+            max-width: 40%
+      button
+        +button(flat, $action-color)
+        padding: 0.7em 1em
+          
+
+      button a:link 
+        color: white
+        text-decoration: none
+      button a:visited
+        color: white
+        text-decoration: none
+
+
+=grid-item-columns($columns)
+  width: 100% / 12 * $columns
+
+.grid-items
+  $action-color: #477dca !default
+  $base-background-color: white !default
+  $medium-screen: em(640) !default
+  $large-screen: em(860) !default
+  $grid-items-background: $base-background-color
+  $grid-item-background: desaturate($action-color, 30%)
+  $grid-item-colors: desaturate($action-color, 30%), #3581a5, #5fbebe, #98c79a, #a7a891, #bdcc97, #979ea0
+  $grid-item-border-size: 9px
+  $grid-item-columns: 4
+  $grid-item-half-columns: 6
+  $grid-item-big-columns: 8
+  $grid-item-bigger-columns: 12
+  $grid-item-color: white
+  $grid-item-height: 20em
+  +clearfix
+  .grid-item
+    +transition(all 0.2s ease-in-out)
+    background: $grid-item-background
+    border-bottom: $grid-item-border-size solid $grid-items-background
+    border-left: $grid-item-border-size / 2 solid $grid-items-background
+    border-right: $grid-item-border-size / 2 solid $grid-items-background
+    border-top: 0
+    cursor: pointer
+    float: left
+    height: auto
+    outline: none
+    padding: 2em
+    overflow: hidden
+    text-align: center
+    text-decoration: none
+    width: 100%
+    +media($large-screen)
+      +grid-item-columns($grid-item-columns)
+    @for $i from 1 through length($grid-item-colors)
+      // assign colors from $grid-item-colors list
+      &:nth-child(#{$i})
+        $background-from-list: nth($grid-item-colors, $i)
+        background-color: $background-from-list
+        box-shadow: inset 0px 0px 1px 2px darken($background-from-list, 10%)
+        &:focus,
+        &:hover
+          background-color: darken($background-from-list, 10%)
+          background-repeat: no-repeat
+          background-position: top
+          background-size: cover
+  .grid-item img
+    display: block
+    height: 3em
+    margin-bottom: 1em
+    margin: auto
+  .grid-item h1
+    color: $grid-item-color
+    font-size: 1.3em
+    margin-bottom: 0.4em
+  .grid-item p
+    line-height: 1.5em
+    margin: auto
+    color: transparentize($grid-item-color, 0.3)
+    +media($medium-screen)
+      max-width: 70%
+  .grid-item-big
+    +media($large-screen)
+      +grid-item-columns($grid-item-big-columns)
+  .grid-item-half
+    +media($large-screen)
+      +grid-item-columns($grid-item-half-columns)
+  .grid-item-bigger
+    +media($large-screen)
+      +grid-item-columns($grid-item-bigger-columns)
+
+    p
+      +media($medium-screen)
+        max-width: 60%
+  .grid-item-image
+    background: url("https://raw.githubusercontent.com/thoughtbot/refills/master/source/images/mountains.png")
+    background-color: $grid-item-background
+    background-position: top
+    background-repeat: no-repeat
+    background-size: cover
+
+
+
+.cardWrap
+  display: block
+
+=cards
+  .cards
+    +display(flex)
+    +flex-wrap(wrap)
+    +justify-content(space-between)
+  .card
+    $base-border-color: gainsboro !default
+    $base-border-radius: 3px !default
+    $base-background-color: white !default
+    $base-spacing: 1.5em !default
+    $action-color: #477dca !default
+    $base-link-color: $action-color !default
+    $dark-gray: #333333 !default
+    $base-font-color: $dark-gray !default
+    $card-border-color: $base-border-color
+    $card-border: 1px solid $card-border-color
+    $card-background: lighten($card-border-color, 10%)
+    $card-header-background: $card-background
+    $card-hover-background: lighten($card-background, 5%)
+    $card-image-background: #dbd199
+    $card-image-hover-background: lighten($card-image-background, 5%)
+    $card-margin: 1em
+    +flex-basis(15em)
+    +flex-grow(1)
+    +transition(all 0.2s ease-in-out)
+    background-color: $card-background
+    border-radius: $base-border-radius
+    border: $card-border
+    box-shadow: 0 2px 4px darken($base-background-color, 10%)
+    cursor: pointer
+    margin: 0 $card-margin $base-spacing $card-margin
+    position: relative
+    .card-image
+      overflow: hidden
+      max-height: 150px
+      img
+        +transition(all 0.2s ease-in-out)
+        background: $card-image-background
+        border-top-left-radius: $base-border-radius
+        border-top-right-radius: $base-border-radius
+        width: 100%
+    .card-header
+      +transition(all 0.2s ease-in-out)
+      background-color: $card-header-background
+      border-bottom: $card-border
+      border-radius: $base-border-radius $base-border-radius 0 0
+      font-weight: bold
+      line-height: 1.5em
+      padding: $base-spacing / 3 $base-spacing / 2
+    .card-copy
+      font-size: 0.9em
+      line-height: 1.5em
+      padding: $base-spacing / 2 $base-spacing / 2
+      p
+        margin: 0 0 $base-spacing / 2
+    &:focus,
+    &:hover
+      background-color: $card-hover-background
+      .card-image img
+        background: $card-image-hover-background
+      .card-header
+        background-color: $card-hover-background
+    &:active
+      background-color: $card-background
+      .card-header
+        background-color: $card-background
+
+
+
+.pics-grid
+  $action-color: #477dca !default
+  $base-background-color: white !default
+  $medium-screen: em(640) !default
+  $large-screen: em(860) !default
+  $grid-items-background: $base-background-color
+  $grid-item-background: desaturate($action-color, 30%)
+  $grid-item-colors: desaturate($action-color, 30%), #3581a5, #5fbebe, #98c79a, #a7a891, #bdcc97, #979ea0
+  $grid-item-border-size: 9px
+  $grid-item-columns: 4
+  $grid-item-half-columns: 6
+  $grid-item-big-columns: 8
+  $grid-item-bigger-columns: 12
+  $grid-item-color: white
+  $grid-item-height: 20em
+  +clearfix
+  img
+    +media($large-screen)
+      +grid-item-columns($grid-item-half-columns)
+    +transition(all 0.2s ease-in-out)
+    background: $grid-item-background
+    border-bottom: $grid-item-border-size solid $grid-items-background
+    border-left: $grid-item-border-size / 2 solid $grid-items-background
+    border-right: $grid-item-border-size / 2 solid $grid-items-background
+    border-top: 0
+    cursor: pointer
+    float: left
+    height: auto
+    outline: none
+    padding: 2em
+    overflow: hidden
+    text-align: center
+    text-decoration: none
+    width: 100%
+    +media($large-screen)
+      +grid-item-columns($grid-item-columns)
+    @for $i from 1 through length($grid-item-colors)
+      // assign colors from $grid-item-colors list
+      &:nth-child(#{$i})
+        $background-from-list: nth($grid-item-colors, $i)
+        background-color: $background-from-list
+        box-shadow: inset 0px 0px 1px 2px darken($background-from-list, 10%)
+        &:focus,
+        &:hover
+          background-color: darken($background-from-list, 10%)
+          background-repeat: no-repeat
+          background-position: top
+          background-size: cover
+  img
+    display: block
+    height: 3em
+    margin-bottom: 1em
+    margin: auto
+  .grid-item h1
+    color: $grid-item-color
+    font-size: 1.3em
+    margin-bottom: 0.4em
+  .grid-item p
+    line-height: 1.5em
+    margin: auto
+    color: transparentize($grid-item-color, 0.3)
+    +media($medium-screen)
+      max-width: 70%
+  .grid-item-big
+    +media($large-screen)
+      +grid-item-columns($grid-item-big-columns)
+  .grid-item-bigger
+    +media($large-screen)
+      +grid-item-columns($grid-item-bigger-columns)
+
+    p
+      +media($medium-screen)
+        max-width: 60%
+
+=footer
+  .footer
+    $base-spacing: .5em !default
+    $action-color: #477dca !default
+    $medium-screen: em(640) !default
+    $large-screen: em(860) !default
+    $footer-background: desaturate(darken($action-color, 20%), 30%)
+    $footer-color: white
+    $footer-link-color: transparentize($footer-color, 0.6)
+    $footer-disclaimer-color: transparentize($footer-color, 0.6)
+    background: $footer-background
+    padding: $base-spacing $gutter
+    width: 100%
+    .footer-logo
+      margin-bottom: 2em
+      text-align: center
+      img
+        height: auto
+    .footer-links
+      +media($medium-screen)
+    ul
+      margin-bottom: $base-spacing
+      padding: 0
+      +media($medium-screen)
+        +clearfix
+    li
+      line-height: 1.5em
+      list-style: none
+      text-align: center
+      +media($medium-screen)
+    li a
+      color: $footer-link-color
+      text-decoration: none
+      &:focus,
+      &:hover
+        color: transparentize($footer-color, 0)
+    li h3
+      color: $footer-color
+      font-size: 1em
+      font-weight: 800
+      margin-bottom: 0.4em
+    hr
+      border: 1px solid transparentize($footer-disclaimer-color, 0.3)
+      margin: 0 auto $base-spacing
+      width: 12em
+    p
+      color: $footer-disclaimer-color
+      font-size: 0.9em
+      line-height: 1.5em
+      margin: auto
+      max-width: 35em
+      text-align: center
+  

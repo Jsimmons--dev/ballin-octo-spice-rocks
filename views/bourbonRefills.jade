@@ -1,0 +1,96 @@
+mixin gridlike(id)
+      div(id='id').hero
+        .hero-inner
+          .hero-copy
+            h1 #{welcomeTextTitle}
+            p
+              | #{welcomeTextBody}
+            p #{yqzplug}
+          button 
+            a(href='#{yqzother}') See Other Listings 
+
+mixin gridItems(id)
+    .grid-items
+      a.grid-item.grid-item-bigger(href='javascript:void(0)')
+        h1 #{title}
+        p #{subtitle}
+      a.grid-item.grid-item-half(href='javascript:void(0)')
+        p #{description}
+      #{pics}
+      img.grid-item.grid-item-half(src='#{pics}')
+      img.grid-item.grid-item-half(src='#{pics}')
+      img.grid-item.grid-item-half(src='#{pics}')
+      a.grid-item.grid-item-bigger(href='javascript:void(0)')
+        h1 #{facts}
+        h1 #{factss1}
+        h1 In our #{years}th year on Ebay!
+        h1 #{b2}
+        h1 #{auctionsline} 
+        h1 #{b1}
+        h1 #{b3}
+        h1 #{b4}
+        h1 #{b5} 
+        h1 #{b6} 
+  
+mixin tosTop
+    .grid-items
+      a.grid-item.grid-item-bigger(href='javascript:void(0)')
+        h1 #{b7}
+        p #{b8}
+
+mixin tosGrid(id)
+    .grid-items
+      a.grid-item.grid-item-bigger(href='javascript:void(0)')
+        h1 #{b12}
+        p #{b13}
+      a.grid-item.grid-item-bigger(href='javascript:void(0)')
+        h1 #{b14}
+        p #{b15}
+      a.grid-item.grid-item-bigger(href='javascript:void(0)')
+        h1 #{b16}
+        p #{b17}
+      a.grid-item.grid-item-bigger(href='javascript:void(0)')
+        h1 #{b18}
+        p #{b19}
+      a.grid-item.grid-item-bigger(href='javascript:void(0)')
+        h1 #{b20}
+        p #{b21}
+      a.grid-item.grid-item-bigger(href='javascript:void(0)')
+        h1 #{b22}
+        p #{b23}
+      a.grid-item.grid-item-bigger(href='javascript:void(0)')
+        h1 #{b18}
+        p #{b19}
+      a.grid-item.grid-item-bigger(href='javascript:void(0)')
+        h1 #{b20}
+        p #{b21}
+      a.grid-item.grid-item-bigger(href='javascript:void(0)')
+        h1 #{b22}
+        p #{b23}
+      a.grid-item.grid-item-bigger(href='javascript:void(0)')
+        h1 #{b24}
+        p #{b25}
+      a.grid-item.grid-item-bigger(href='javascript:void(0)')
+        h1 #{b26}
+        p #{b27}
+      a.grid-item.grid-item-bigger(href='javascript:void(0)')
+        h1 #{b28}
+        p #{b29}
+
+mixin footer
+    footer.footer(role='contentinfo')
+      .footer-logo
+      .footer-links
+        ul
+          li
+            h3 Follow Us
+          li
+            a(href='http://home.estateauctionsinc.com') Home
+          li
+            a(href='https://www.facebook.com/estateauctions') Facebook
+          li
+            a(href='https://twitter.com/knowsebay') Twitter
+      hr
+      p
+        | Copyright 2015. Estate Auctions Inc. YQZ Antiques. All Rights Reserved. 
+

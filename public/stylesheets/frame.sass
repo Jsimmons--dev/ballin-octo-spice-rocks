@@ -1,5 +1,6 @@
 @import bourbon/bourbon
 @import neat/neat
+@import refills
 $parchment: #fefcaf
 $dark-parchment :#e68a00
 $brown-text: #522900
@@ -14,102 +15,191 @@ $pad-between: 10px
 $boiler-pad: 30px 
 
 =fix-size
-	+shift($extra)
-	+span-columns($span of $col-max)
-	+pad($pad-between 0 $pad-between 0)
+  +shift($extra)
+  +span-columns($span of $col-max)
+  +pad($pad-between 0 $pad-between 0)
 =bolden
-	font-weight: bold
-	font-size: 22px
-	+pad($boiler-pad 0 0 0)
+  font-weight: bold
+  font-size: 22px
+  +pad($boiler-pad 0 0 0)
 
 =title
-	font-weight: bold
-	font-size: 30px	
+  font-weight: bold
+  font-size: 30px	
+
+$linkColorHover: #00b0ec
+$gray: #F0F0F0
+$gray2: #aaa
+$left: -30px
+$right: -30px
+$width-of-crumb: $width/28
+
 
 =single1($main-txt, $bg, $bg-dark, $w, $welcome-color,$cols, $bg-contrast, $bpad, $plaque-dark, $plaque-light)
-	color: $main-txt
-	background-color: $bg
-	+linear-gradient($bg-dark ,$bg 8%,$bg 99% ,$bg-dark,$fallback: $bg)
-	text-align: center
-	font-size: 20px
-	+span-columns($cols)
-	width: $w
-	font-family: "Trebuchet MS", Helvetica, sans-serif
-	font-weight: lighter
-	.welcomeC
-		.welcomeTitle
-			font-weight: bold
-			font-size: 40px
-		+fix-size
-	+row()	
-	.yqzplugC
-		+bolden
-		.listings
-			+pad(10px)
-			font-size: 22px
-			+row()
-		+fix-size
-	+row()
-	.importantC
-		color: $welcome-color
-		+linear-gradient($plaque-dark, $plaque-light 5%, $plaque-light 95%, $plaque-dark, $fallback: $plaque-light)
-		border-radius: 20px	
-		+border-style(double double double double)
-		+fix-size
-		+border-width(7px 7px 7px 7px)
-		+border-color($plaque-dark)
-		.titleC
-			+title
-			+fix-size
-			border-bottom: thin solid $main-txt
-		+row()
-		.subtitleC
-			+title
-			+padding(0 0 30px 0)
-			+fix-size
-		+row()
-		.descC
-			+fix-size
-	+row()
-	.picsC
-		+fix-size
-	+row()
-	.factsC
-		.facts
-			+title
-			+fix-size
-		+row
-		.factss1
-			+title
-			+fix-size
-		+row
-		.auctionsline
-			+title
-			+fix-size
-		+row
-		.years
-			+title
-			+fix-size
-	+row()
-	.appletC
-		+fix-size
-	+row()
-	.boilerC
-		.title
-			+bolden
-		+fix-size
-	+pad(0 0 $bpad 0)
+  +footer
+  color: $main-txt
+  +linear-gradient($bg-dark ,$bg 8%,$bg 99% ,$bg-dark,$fallback: $bg)
+  text-align: center
+  font-size: 20px
+  +span-columns($cols)
+  width: $w
+  font-family: "Trebuchet MS", Helvetica, sans-serif
+  font-weight: lighter
+  .welcomeC
+    .welcomeTitle
+      font-weight: bold
+      font-size: 40px
+    +fix-size
+  +row()	
+  .yqzplugC
+    +bolden
+    .listings
+      +pad(10px)
+      font-size: 22px
+    +fix-size
+  +row()
+  .importantC
+    color: $welcome-color
+    +linear-gradient($plaque-dark, $plaque-light 5%, $plaque-light 95%, $plaque-dark, $fallback: $plaque-light)
+    border-radius: 20px	
+    +border-style(double double double double)
+    +fix-size
+    +border-width(7px 7px 7px 7px)
+    +border-color($plaque-dark)
+    .titleC
+      +title
+      +fix-size
+      border-bottom: thin solid $main-txt
+    +row()
+    .subtitleC
+      +title
+      +padding(0 0 30px 0)
+      +fix-size
+      +row()
+    .descC
+      +fix-size
+    +row()
+  .picsC
+    +fix-size
+  +row()
+  .factsC
+    .facts
+      +title
+      +fix-size
+    +row()
+    .factss1
+      +title
+      +fix-size
+    +row
+    .auctionsline
+      +title
+      +fix-size
+    +row
+    .years
+      +title
+      +fix-size
+  +row()
+  .traderpic
+    +fix-size
+  +row()
+  .appletC
+    +fix-size
+  +row()
+  .tos
+    +fix-size
+  +row()		
+  .boilerC
+    .title
+      +bolden
+    +fix-size
+  +pad(0 0 $bpad 0)
 
 .example1
-	+single1($brown-text, $parchment, $dark-parchment, $width, $brown-text,$col-max, $white, $boiler-pad, $dark-parchment, $parchment)
+  +single1($brown-text, $parchment, $dark-parchment, $width, $brown-text,$col-max, $white, $boiler-pad, $dark-parchment, $parchment)
 
 
 $txt-grey: #3d3d29
-$bg-grey: #9dbdbd
+$bg-grey: white
 $bg-dark-grey: #527a7a
 $bg-contrast-grey: #140a00
 $yeller: #cc9900
 .example2
-	+single1($txt-grey, $bg-grey, $bg-dark-grey, $width, $brown-text ,$col-max, $bg-contrast-grey, $boiler-pad, $dark-parchment, $parchment)
+  +single1($txt-grey, $bg-grey, $bg-dark-grey, $width, $brown-text ,$col-max, $bg-contrast-grey, $boiler-pad, $dark-parchment, $parchment)
+  
+  .button-group
+    display: inline-block
+    $base-border-color: gainsboro !default
+    $base-border-radius: 3px !default
+    $base-line-height: 1.5em !default
+    $base-spacing: 1.5em !default
+    $base-font-size: 1em !default
+    $base-background-color: white !default
+    $action-color: #477dca !default
+    $base-link-color: $action-color !default
+    $dark-gray: #333333 !default
+    $large-screen: em(860) !default
+    $base-font-color: $dark-gray !default
+    $button-group-background: $base-background-color
+    $button-group-color: lighten($base-font-color, 30%)
+    $button-group-border: 1px solid silver
+    $button-group-inner-border: 1px solid lighten(silver, 18%)
+    $button-group-background-checked: $action-color
+    $button-group-color-checked: white
+    $button-group-border-checked: darken($button-group-background-checked, 15%)
+    input
+      display: none
+    label
+      margin-bottom: 0
+      +media($large-screen)
+        float: left
+  
+      .button-group-item
+        background: $button-group-background
+        border-left: $button-group-border
+        border-radius: 0
+        border-right: $button-group-border
+        color: $button-group-color
+        cursor: pointer
+        display: inline-block
+        font-size: $base-font-size
+        font-weight: normal
+        line-height: 1
+        padding: 0.75em 1em
+        width: 100%
+        +media($large-screen)
+          border-bottom: $button-group-border
+          border-left: 0
+          border-right: $button-group-inner-border
+          border-top: $button-group-border
+          width: auto
+  
+        &:focus,
+        &:hover
+          background-color: darken($button-group-background, 3%)
+      &:first-child .button-group-item
+        border-top-left-radius: $base-border-radius
+        border-top-right-radius: $base-border-radius
+        border-top: $button-group-border
+        +media($large-screen)
+          border-bottom-left-radius: $base-border-radius
+          border-left: $button-group-border
+          border-top-left-radius: $base-border-radius
+          border-top-right-radius: 0
+      &:last-child .button-group-item
+        border-bottom-left-radius: $base-border-radius
+        border-bottom-right-radius: $base-border-radius
+        border-bottom: $button-group-border
+        +media($large-screen)
+          border-bottom-left-radius: 0
+          border-bottom-right-radius: $base-border-radius
+          border-right: $button-group-border
+          border-top-right-radius: $base-border-radius
+      input:checked + .button-group-item
+        background: $button-group-background-checked
+        border: 1px solid $button-group-border-checked
+        box-shadow: inset 0 1px 2px darken($button-group-background-checked, 10%)
+        color: $button-group-color-checked
 
-
+  +grid-item-columns(12) 
++hero-panel
++cards
