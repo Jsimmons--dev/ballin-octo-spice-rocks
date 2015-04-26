@@ -1,8 +1,24 @@
+@import neat/neat
+$color1: #FCFCFF
+$color2: #FCFEFF
+$color3: #FCFFFE
+$color4: #FFFEFC
+$color6: #477dca
+$color5: #110549
+$tablet: "(min-width: 768px) and (max-width:1023px)"
+$phone: "(max-width: 767px)"
+$big-font: 1.5em
+$small-font: 1.5em
+$small-font-footer: 1.0em
+$small-font-mobile-footer: $small-font-footer * 1.2
+$big-font-mobile: $big-font * 1.5
+$small-font-mobile: $small-font * 1.2
+$large-screen: em(860) !default
+$mobile: "screen and (max-width : 1024px)"
 =hero-panel
   .hero
     $base-border-radius: 3px !default
     $action-color: #477dca !default
-    $large-screen: em(860) !default
     $hero-background-top: #7f99be
     $hero-background-bottom: #20392b
     $hero-color: white
@@ -20,30 +36,37 @@
       +clearfix
       color: $hero-color
       margin: auto
-      padding: 3.5em
+      padding: 1.0em
       text-align: center
       .hero-copy
         text-align: center
         h1
-          font-size: 1.6em
+          font-weight: 400
+          font-size: $big-font
           margin-bottom: 0.5em
-          +media($large-screen)
-            font-size: 1.8em
+          @media #{$mobile}
+            font-size: $big-font-mobile
         p
-          font-weight: 200
+          font-size: $small-font
+          font-weight: 400
           line-height: 1.4em
           margin: 0 auto 3em auto
-            font-size: 1.1em
-            max-width: 40%
+          @media #{$mobile}
+            font-size: $big-font
+            max-width: 95%
       button
         +button(flat, $action-color)
-        padding: 0.7em 1em
+        padding: 0.7em 2em
           
 
       button a:link 
+        @media #{$mobile}
+          font-size: $big-font-mobile
         color: white
         text-decoration: none
       button a:visited
+        @media #{$mobile}
+          font-size: $big-font-mobile
         color: white
         text-decoration: none
 
@@ -53,19 +76,26 @@
 
 .grid-items
   $action-color: #477dca !default
-  $base-background-color: white !default
+  $base-background-color: $color5 !default
   $medium-screen: em(640) !default
-  $large-screen: em(860) !default
+  $small-screen: em(420)
   $grid-items-background: $base-background-color
-  $grid-item-background: desaturate($action-color, 30%)
-  $grid-item-colors: desaturate($action-color, 30%), #3581a5, #5fbebe, #98c79a, #a7a891, #bdcc97, #979ea0
+  $grid-item-background: $color2
+  $grid-item-colors: $color4,$color3,$color2,$color1,$color4,$color3,$color2,$color1,$color2,$color3
   $grid-item-border-size: 9px
+  $grid-item-tiniest-columns: 2
+  $grid-item-tiny-columns: 3
   $grid-item-columns: 4
   $grid-item-half-columns: 6
+  $grid-item-tq-columns: 9
   $grid-item-big-columns: 8
   $grid-item-bigger-columns: 12
-  $grid-item-color: white
+  $grid-item-color: #222222
+  $grid-item-color-p: #333333
   $grid-item-height: 20em
+  $grid-height : 30em
+  $mobile-grid-height: 50em
+  $image-height : 14em
   +clearfix
   .grid-item
     +transition(all 0.2s ease-in-out)
@@ -74,208 +104,91 @@
     border-left: $grid-item-border-size / 2 solid $grid-items-background
     border-right: $grid-item-border-size / 2 solid $grid-items-background
     border-top: 0
-    cursor: pointer
     float: left
-    height: auto
     outline: none
-    padding: 2em
     overflow: hidden
+    padding: 1.5em
     text-align: center
     text-decoration: none
     width: 100%
     +media($large-screen)
       +grid-item-columns($grid-item-columns)
+    @media #{$mobile}
+      +grid-item-columns($grid-item-bigger-columns)
     @for $i from 1 through length($grid-item-colors)
-      // assign colors from $grid-item-colors list
       &:nth-child(#{$i})
         $background-from-list: nth($grid-item-colors, $i)
         background-color: $background-from-list
         box-shadow: inset 0px 0px 1px 2px darken($background-from-list, 10%)
-        &:focus,
-        &:hover
-          background-color: darken($background-from-list, 10%)
-          background-repeat: no-repeat
-          background-position: top
-          background-size: cover
-  .grid-item img
+
+  .grid-item-pic
     display: block
-    height: 3em
+    background-size: cover
+    background-repeat: no-repeat
+    background-position: center
+    height: $grid-height
     margin-bottom: 1em
     margin: auto
   .grid-item h1
+    font-weight: 400
+    font-size: $big-font
+    @media #{$mobile}
+      font-size: $big-font-mobile
     color: $grid-item-color
-    font-size: 1.3em
     margin-bottom: 0.4em
+    border-bottom: thin solid #CCCCCC
   .grid-item p
-    line-height: 1.5em
-    margin: auto
-    color: transparentize($grid-item-color, 0.3)
+    font-size: $small-font
+    @media #{$mobile}
+      font-size: $small-font-mobile
+    color: $grid-item-color
+    line-height: 1.4em 
+    +margin(auto)
     +media($medium-screen)
-      max-width: 70%
+      max-width: 95%
+  .grid-item small
+    font-size: $small-font-footer
+    @media #{$mobile}
+      font-size: $small-font-mobile-footer
+    color: $grid-item-color
+    line-height: 1.4em 
+    +margin(auto)
+    +media($medium-screen)
+      max-width: 95%
+  .grid-item-tiniest
+    +media($large-screen)
+      +grid-item-columns($grid-item-tiniest-columns)
+  .grid-item-tiny
+    +media($large-screen)
+      +grid-item-columns($grid-item-tiny-columns)
   .grid-item-big
     +media($large-screen)
       +grid-item-columns($grid-item-big-columns)
+  .grid-item-tq
+    +media($large-screen)
+      +grid-item-columns($grid-item-tq-columns)
   .grid-item-half
     +media($large-screen)
       +grid-item-columns($grid-item-half-columns)
+    @media #{$mobile}
+      height: $mobile-grid-height
+      +grid-item-columns($grid-item-bigger-columns)
   .grid-item-bigger
     +media($large-screen)
       +grid-item-columns($grid-item-bigger-columns)
-
-    p
-      +media($medium-screen)
-        max-width: 60%
-  .grid-item-image
-    background: url("https://raw.githubusercontent.com/thoughtbot/refills/master/source/images/mountains.png")
-    background-color: $grid-item-background
-    background-position: top
-    background-repeat: no-repeat
-    background-size: cover
-
-
-
-.cardWrap
-  display: block
-
-=cards
-  .cards
-    +display(flex)
-    +flex-wrap(wrap)
-    +justify-content(space-between)
-  .card
-    $base-border-color: gainsboro !default
-    $base-border-radius: 3px !default
-    $base-background-color: white !default
-    $base-spacing: 1.5em !default
-    $action-color: #477dca !default
-    $base-link-color: $action-color !default
-    $dark-gray: #333333 !default
-    $base-font-color: $dark-gray !default
-    $card-border-color: $base-border-color
-    $card-border: 1px solid $card-border-color
-    $card-background: lighten($card-border-color, 10%)
-    $card-header-background: $card-background
-    $card-hover-background: lighten($card-background, 5%)
-    $card-image-background: #dbd199
-    $card-image-hover-background: lighten($card-image-background, 5%)
-    $card-margin: 1em
-    +flex-basis(15em)
-    +flex-grow(1)
-    +transition(all 0.2s ease-in-out)
-    background-color: $card-background
-    border-radius: $base-border-radius
-    border: $card-border
-    box-shadow: 0 2px 4px darken($base-background-color, 10%)
+  .grid-item-link
     cursor: pointer
-    margin: 0 $card-margin $base-spacing $card-margin
-    position: relative
-    .card-image
-      overflow: hidden
-      max-height: 150px
-      img
-        +transition(all 0.2s ease-in-out)
-        background: $card-image-background
-        border-top-left-radius: $base-border-radius
-        border-top-right-radius: $base-border-radius
-        width: 100%
-    .card-header
-      +transition(all 0.2s ease-in-out)
-      background-color: $card-header-background
-      border-bottom: $card-border
-      border-radius: $base-border-radius $base-border-radius 0 0
-      font-weight: bold
-      line-height: 1.5em
-      padding: $base-spacing / 3 $base-spacing / 2
-    .card-copy
-      font-size: 0.9em
-      line-height: 1.5em
-      padding: $base-spacing / 2 $base-spacing / 2
-      p
-        margin: 0 0 $base-spacing / 2
     &:focus,
     &:hover
-      background-color: $card-hover-background
-      .card-image img
-        background: $card-image-hover-background
-      .card-header
-        background-color: $card-hover-background
-    &:active
-      background-color: $card-background
-      .card-header
-        background-color: $card-background
-
-
-
-.pics-grid
-  $action-color: #477dca !default
-  $base-background-color: white !default
-  $medium-screen: em(640) !default
-  $large-screen: em(860) !default
-  $grid-items-background: $base-background-color
-  $grid-item-background: desaturate($action-color, 30%)
-  $grid-item-colors: desaturate($action-color, 30%), #3581a5, #5fbebe, #98c79a, #a7a891, #bdcc97, #979ea0
-  $grid-item-border-size: 9px
-  $grid-item-columns: 4
-  $grid-item-half-columns: 6
-  $grid-item-big-columns: 8
-  $grid-item-bigger-columns: 12
-  $grid-item-color: white
-  $grid-item-height: 20em
-  +clearfix
-  img
-    +media($large-screen)
-      +grid-item-columns($grid-item-half-columns)
-    +transition(all 0.2s ease-in-out)
-    background: $grid-item-background
-    border-bottom: $grid-item-border-size solid $grid-items-background
-    border-left: $grid-item-border-size / 2 solid $grid-items-background
-    border-right: $grid-item-border-size / 2 solid $grid-items-background
-    border-top: 0
-    cursor: pointer
-    float: left
-    height: auto
-    outline: none
-    padding: 2em
-    overflow: hidden
-    text-align: center
-    text-decoration: none
-    width: 100%
-    +media($large-screen)
-      +grid-item-columns($grid-item-columns)
-    @for $i from 1 through length($grid-item-colors)
-      // assign colors from $grid-item-colors list
-      &:nth-child(#{$i})
-        $background-from-list: nth($grid-item-colors, $i)
-        background-color: $background-from-list
-        box-shadow: inset 0px 0px 1px 2px darken($background-from-list, 10%)
-        &:focus,
-        &:hover
-          background-color: darken($background-from-list, 10%)
-          background-repeat: no-repeat
-          background-position: top
-          background-size: cover
-  img
-    display: block
-    height: 3em
-    margin-bottom: 1em
-    margin: auto
-  .grid-item h1
-    color: $grid-item-color
-    font-size: 1.3em
-    margin-bottom: 0.4em
-  .grid-item p
-    line-height: 1.5em
-    margin: auto
-    color: transparentize($grid-item-color, 0.3)
-    +media($medium-screen)
-      max-width: 70%
-  .grid-item-big
-    +media($large-screen)
-      +grid-item-columns($grid-item-big-columns)
-  .grid-item-bigger
-    +media($large-screen)
-      +grid-item-columns($grid-item-bigger-columns)
-
+      background-color: darken($color6,20%)
+    background-color: $color6
+    p
+      color: white
+    border-radius: 20px
+  .grid-item-image
+    +media ($large-screen)
+      +grid-item-columns($grid-item-tiny-columns)
+    height: $image-height
     p
       +media($medium-screen)
         max-width: 60%
@@ -293,11 +206,6 @@
     background: $footer-background
     padding: $base-spacing $gutter
     width: 100%
-    .footer-logo
-      margin-bottom: 2em
-      text-align: center
-      img
-        height: auto
     .footer-links
       +media($medium-screen)
     ul
@@ -319,7 +227,7 @@
     li h3
       color: $footer-color
       font-size: 1em
-      font-weight: 800
+      font-weight: 400
       margin-bottom: 0.4em
     hr
       border: 1px solid transparentize($footer-disclaimer-color, 0.3)

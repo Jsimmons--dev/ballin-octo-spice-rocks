@@ -10,26 +10,34 @@ mixin gridlike(id)
             a(href='#{yqzother}') See Other Listings 
 
 mixin gridItems(id)
+  div.content-holder
     .grid-items
-      a.grid-item.grid-item-bigger(href='javascript:void(0)')
+      a.grid-item.grid-item-bigger
         h1 !{title}
         p !{subtitle}
-      a.grid-item.grid-item-half(href='javascript:void(0)')
-        p !{description}
-      img.grid-item.grid-item-half(src!= pics)
-      img.grid-item.grid-item-half(src='#{pics}')
-      img.grid-item.grid-item-half(src='#{pics}')
-      a.grid-item.grid-item-bigger(href='javascript:void(0)')
+      a.grid-item.grid-item-bigger
+        p !{descriptionTop}
+        br
+        p ...keep scrolling there are !{picsNum} pictures!{moreBelow} below!
+        !{extra_html} 
+    .grid-items 
+      !{pics}
+      a.grid-item.grid-item-bigger
+        p ...!{descriptionBottom}
+        p Estimated shipping weight, (packaged) is  !{weight}
+        br
+        p in a !{dims}
+      a.grid-item.grid-item-bigger
         h1 #{facts}
-        h1 #{factss1}
-        h1 This is our !{years}th year on EBay!
-        h1 #{b2}
-        h1 #{auctionsline} 
-        h1 #{b1}
-        h1 #{b3}
-        h1 #{b4}
-        h1 #{b5} 
-        h1 #{b6} 
+        p #{factss1}
+        p This is our !{years} year on eBay!
+        p #{b2}
+        p #{auctionsline} 
+        p #{b1}
+        p #{b3}
+        p #{b4}
+        p #{b5} 
+        p #{b6} 
   
 mixin tosTop
     .grid-items
@@ -39,57 +47,55 @@ mixin tosTop
 
 mixin tosGrid(id)
     .grid-items
-      a.grid-item.grid-item-bigger(href='javascript:void(0)')
+      a.grid-item.grid-item-bigger
+        h1 #{b7}
+        p #{b8}
+        br
+        p #{b9}
+        br
+        p #{b10}
+        br
+        p #{b11}
+      a.grid-item.grid-item-bigger
         h1 #{b12}
         p #{b13}
-      a.grid-item.grid-item-bigger(href='javascript:void(0)')
+      a.grid-item.grid-item-bigger
         h1 #{b14}
         p #{b15}
-      a.grid-item.grid-item-bigger(href='javascript:void(0)')
+      a.grid-item.grid-item-bigger
         h1 #{b16}
         p #{b17}
-      a.grid-item.grid-item-bigger(href='javascript:void(0)')
+      a.grid-item.grid-item-bigger
         h1 #{b18}
         p #{b19}
-      a.grid-item.grid-item-bigger(href='javascript:void(0)')
+      a.grid-item.grid-item-bigger
         h1 #{b20}
         p #{b21}
-      a.grid-item.grid-item-bigger(href='javascript:void(0)')
+      a.grid-item.grid-item-bigger
         h1 #{b22}
         p #{b23}
-      a.grid-item.grid-item-bigger(href='javascript:void(0)')
-        h1 #{b18}
-        p #{b19}
-      a.grid-item.grid-item-bigger(href='javascript:void(0)')
-        h1 #{b20}
-        p #{b21}
-      a.grid-item.grid-item-bigger(href='javascript:void(0)')
-        h1 #{b22}
-        p #{b23}
-      a.grid-item.grid-item-bigger(href='javascript:void(0)')
+      a.grid-item.grid-item-bigger
         h1 #{b24}
         p #{b25}
-      a.grid-item.grid-item-bigger(href='javascript:void(0)')
+      a.grid-item.grid-item-bigger
         h1 #{b26}
         p #{b27}
-      a.grid-item.grid-item-bigger(href='javascript:void(0)')
+      a.grid-item.grid-item-bigger
         h1 #{b28}
         p #{b29}
+      a.grid-item.grid-item-bigger
+        h1 Follow Us
+      a.grid-item.grid-item-small.grid-footer-button.grid-item-link(href='http://home.estateauctionsinc.com')
+        p Home
+      a.grid-item.grid-item-small.grid-footer-button.grid-item-link(href='https://www.facebook.com/estateauctions')
+        p Facebook
+      a.grid-item.grid-item-small.grid-footer-button.grid-item-link(href='https://twitter.com/knowsebay')
+        p Twitter
+      a.grid-item.grid-item-bigger
+        small Copyright 2015. Estate Auctions Inc. YQZ Antiques. All Rights Reserved. 
 
 mixin footer
     footer.footer(role='contentinfo')
       .footer-logo
       .footer-links
-        ul
-          li
-            h3 Follow Us
-          li
-            a(href='http://home.estateauctionsinc.com') Home
-          li
-            a(href='https://www.facebook.com/estateauctions') Facebook
-          li
-            a(href='https://twitter.com/knowsebay') Twitter
-      hr
-      p
-        | Copyright 2015. Estate Auctions Inc. YQZ Antiques. All Rights Reserved. 
 
