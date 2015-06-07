@@ -76,13 +76,13 @@ html {
   margin: auto; }
 .grid-items .grid-item h1 {
   font-weight: 400;
-  font-size: 1.5em;
+  font-size: 1.7em;
   color: #222222;
   margin-bottom: 0.4em;
   border-bottom: thin solid #CCCCCC; }
   @media screen and (max-width: 1024px) {
     .grid-items .grid-item h1 {
-      font-size: 2.25em; } }
+      font-size: 2.55em; } }
 .grid-items .grid-item p {
   font-size: 1.5em;
   color: #222222;
@@ -181,11 +181,11 @@ body {
       text-align: center; }
       .hero .hero-inner .hero-copy h1 {
         font-weight: 400;
-        font-size: 1.5em;
+        font-size: 1.7em;
         margin-bottom: 0.5em; }
         @media screen and (max-width: 1024px) {
           .hero .hero-inner .hero-copy h1 {
-            font-size: 2.25em; } }
+            font-size: 2.55em; } }
       .hero .hero-inner .hero-copy p {
         font-size: 1.5em;
         font-weight: 400;
@@ -193,7 +193,7 @@ body {
         margin: 0 auto 3em auto; }
         @media screen and (max-width: 1024px) {
           .hero .hero-inner .hero-copy p {
-            font-size: 1.5em;
+            font-size: 1.7em;
             max-width: 95%; } }
     .hero .hero-inner button {
       background-color: #477dca;
@@ -221,13 +221,13 @@ body {
       text-decoration: none; }
       @media screen and (max-width: 1024px) {
         .hero .hero-inner button a:link {
-          font-size: 2.25em; } }
+          font-size: 2.55em; } }
     .hero .hero-inner button a:visited {
       color: white;
       text-decoration: none; }
       @media screen and (max-width: 1024px) {
         .hero .hero-inner button a:visited {
-          font-size: 2.25em; } }
+          font-size: 2.55em; } }
 
 .content-holder .grid-items {
   height: 100%; }
