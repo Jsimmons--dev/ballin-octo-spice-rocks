@@ -4,12 +4,6 @@ html {
 *, *::after, *::before {
   box-sizing: inherit; }
 
-html {
-  box-sizing: border-box; }
-
-*, *::after, *::before {
-  box-sizing: inherit; }
-
 .grid-items::after {
   clear: both;
   content: "";
@@ -152,16 +146,16 @@ body {
   font-weight: lighter;
   width: 100%; }
 
-.hero {
+.header {
   background-color: #324766;
   background-position: top;
   background-repeat: no-repeat;
   background-size: cover;
   padding-bottom: 3em; }
-  .hero .hero-logo img {
+  .header .header-logo img {
     height: 4em;
     margin-bottom: 1em; }
-  .hero .hero-inner {
+  .header .header-inner {
     max-width: 68em;
     margin-left: auto;
     margin-right: auto;
@@ -169,33 +163,33 @@ body {
     margin: auto;
     padding: 1em;
     text-align: center; }
-    .hero .hero-inner::after {
+    .header .header-inner::after {
       clear: both;
       content: "";
       display: table; }
-    .hero .hero-inner::after {
+    .header .header-inner::after {
       clear: both;
       content: "";
       display: table; }
-    .hero .hero-inner .hero-copy {
+    .header .header-inner .header-copy {
       text-align: center; }
-      .hero .hero-inner .hero-copy h1 {
+      .header .header-inner .header-copy h1 {
         font-weight: 400;
         font-size: 1.7em;
         margin-bottom: 0.5em; }
         @media screen and (max-width: 1024px) {
-          .hero .hero-inner .hero-copy h1 {
+          .header .header-inner .header-copy h1 {
             font-size: 2.55em; } }
-      .hero .hero-inner .hero-copy p {
+      .header .header-inner .header-copy p {
         font-size: 1.5em;
         font-weight: 400;
         line-height: 1.4em;
         margin: 0 auto 3em auto; }
         @media screen and (max-width: 1024px) {
-          .hero .hero-inner .hero-copy p {
+          .header .header-inner .header-copy p {
             font-size: 1.7em;
             max-width: 95%; } }
-    .hero .hero-inner button {
+    .header .header-inner button {
       background-color: #477dca;
       border-radius: 3px;
       border: 0;
@@ -207,26 +201,26 @@ body {
       text-decoration: none;
       background-clip: padding-box;
       padding: 0.7em 2em; }
-      .hero .hero-inner button:hover:not(:disabled) {
+      .header .header-inner button:hover:not(:disabled) {
         background-color: #578ad4;
         cursor: pointer; }
-      .hero .hero-inner button:active:not(:disabled), .hero .hero-inner button:focus:not(:disabled) {
+      .header .header-inner button:active:not(:disabled), .header .header-inner button:focus:not(:disabled) {
         background-color: #3c71bb;
         cursor: pointer; }
-      .hero .hero-inner button:disabled {
+      .header .header-inner button:disabled {
         cursor: not-allowed;
         opacity: 0.5; }
-    .hero .hero-inner button a:link {
+    .header .header-inner button a:link {
       color: white;
       text-decoration: none; }
       @media screen and (max-width: 1024px) {
-        .hero .hero-inner button a:link {
+        .header .header-inner button a:link {
           font-size: 2.55em; } }
-    .hero .hero-inner button a:visited {
+    .header .header-inner button a:visited {
       color: white;
       text-decoration: none; }
       @media screen and (max-width: 1024px) {
-        .hero .hero-inner button a:visited {
+        .header .header-inner button a:visited {
           font-size: 2.55em; } }
 
 .content-holder .grid-items {

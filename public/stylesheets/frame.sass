@@ -1,6 +1,248 @@
 @import bourbon/bourbon
 @import neat/neat
-@import refills
+$color1: #FCFCFF
+$color2: #FCFEFF
+$color3: #FCFFFE
+$color4: #FFFEFC
+$color6: #477dca
+$color5: #110549
+$tablet: "(min-width: 768px) and (max-width:1023px)"
+$phone: "(max-width: 767px)"
+$big-font: 1.7em
+$small-font: 1.5em
+$small-font-footer: 1.0em
+$small-font-mobile-footer: $small-font-footer * 1.2
+$big-font-mobile: $big-font * 1.5
+$small-font-mobile: $small-font * 1.2
+$large-screen: em(860) !default
+$mobile: "screen and (max-width : 1024px)"
+=header-panel
+  .header
+    $base-border-radius: 3px !default
+    $action-color: #477dca !default
+    $hero-background-top: #7f99be
+    $hero-background-bottom: #20392b
+    $hero-color: white
+    $gradient-angle: 10deg
+    background-color: #324766
+    background-position: top
+    background-repeat: no-repeat
+    background-size: cover
+    padding-bottom: 3em
+    .header-logo img
+      height: 4em
+      margin-bottom: 1em
+    .header-inner
+      +outer-container
+      +clearfix
+      color: $hero-color
+      margin: auto
+      padding: 1.0em
+      text-align: center
+      .header-copy
+        text-align: center
+        h1
+          font-weight: 400
+          font-size: $big-font
+          margin-bottom: 0.5em
+          @media #{$mobile}
+            font-size: $big-font-mobile
+        p
+          font-size: $small-font
+          font-weight: 400
+          line-height: 1.4em
+          margin: 0 auto 3em auto
+          @media #{$mobile}
+            font-size: $big-font
+            max-width: 95%
+      button
+        +button(flat, $action-color)
+        padding: 0.7em 2em
+          
+
+      button a:link 
+        @media #{$mobile}
+          font-size: $big-font-mobile
+        color: white
+        text-decoration: none
+      button a:visited
+        @media #{$mobile}
+          font-size: $big-font-mobile
+        color: white
+        text-decoration: none
+
+
+=grid-item-columns($columns)
+  width: 100% / 12 * $columns
+
+.grid-items
+  $action-color: #477dca !default
+  $base-background-color: $color5 !default
+  $medium-screen: em(640) !default
+  $small-screen: em(420)
+  $grid-items-background: $base-background-color
+  $grid-item-background: $color2
+  $grid-item-colors: $color4,$color3,$color2,$color1,$color4,$color3,$color2,$color1,$color2,$color3
+  $grid-item-border-size: 9px
+  $grid-item-tiniest-columns: 2
+  $grid-item-tiny-columns: 3
+  $grid-item-columns: 4
+  $grid-item-half-columns: 6
+  $grid-item-tq-columns: 9
+  $grid-item-big-columns: 8
+  $grid-item-bigger-columns: 12
+  $grid-item-color: #222222
+  $grid-item-color-p: #333333
+  $grid-item-height: 20em
+  $grid-height : 30em
+  $mobile-grid-height: 50em
+  $image-height : 14em
+  +clearfix
+  .grid-item
+    +transition(all 0.2s ease-in-out)
+    background: $grid-item-background
+    border-bottom: $grid-item-border-size solid $grid-items-background
+    border-left: $grid-item-border-size / 2 solid $grid-items-background
+    border-right: $grid-item-border-size / 2 solid $grid-items-background
+    border-top: 0
+    float: left
+    outline: none
+    overflow: hidden
+    padding: 1.5em
+    text-align: center
+    text-decoration: none
+    width: 100%
+    +media($large-screen)
+      +grid-item-columns($grid-item-columns)
+    @media #{$mobile}
+      +grid-item-columns($grid-item-bigger-columns)
+    @for $i from 1 through length($grid-item-colors)
+      &:nth-child(#{$i})
+        $background-from-list: nth($grid-item-colors, $i)
+        background-color: $background-from-list
+        box-shadow: inset 0px 0px 1px 2px darken($background-from-list, 10%)
+
+  .grid-item-pic
+    display: block
+    background-size: cover
+    background-repeat: no-repeat
+    background-position: center
+    height: $grid-height
+    margin-bottom: 1em
+    margin: auto
+  .grid-item h1
+    font-weight: 400
+    font-size: $big-font
+    @media #{$mobile}
+      font-size: $big-font-mobile
+    color: $grid-item-color
+    margin-bottom: 0.4em
+    border-bottom: thin solid #CCCCCC
+  .grid-item p
+    font-size: $small-font
+    @media #{$mobile}
+      font-size: $small-font-mobile
+    color: $grid-item-color
+    line-height: 1.4em 
+    +margin(auto)
+    +media($medium-screen)
+      max-width: 95%
+  .grid-item small
+    font-size: $small-font-footer
+    @media #{$mobile}
+      font-size: $small-font-mobile-footer
+    color: $grid-item-color
+    line-height: 1.4em 
+    +margin(auto)
+    +media($medium-screen)
+      max-width: 95%
+  .grid-item-tiniest
+    +media($large-screen)
+      +grid-item-columns($grid-item-tiniest-columns)
+  .grid-item-tiny
+    +media($large-screen)
+      +grid-item-columns($grid-item-tiny-columns)
+  .grid-item-big
+    +media($large-screen)
+      +grid-item-columns($grid-item-big-columns)
+  .grid-item-tq
+    +media($large-screen)
+      +grid-item-columns($grid-item-tq-columns)
+  .grid-item-half
+    +media($large-screen)
+      +grid-item-columns($grid-item-half-columns)
+    @media #{$mobile}
+      height: $mobile-grid-height
+      +grid-item-columns($grid-item-bigger-columns)
+  .grid-item-bigger
+    +media($large-screen)
+      +grid-item-columns($grid-item-bigger-columns)
+  .grid-item-link
+    cursor: pointer
+    &:focus,
+    &:hover
+      background-color: darken($color6,20%)
+    background-color: $color6
+    p
+      color: white
+    border-radius: 20px
+  .grid-item-image
+    +media ($large-screen)
+      +grid-item-columns($grid-item-tiny-columns)
+    height: $image-height
+    p
+      +media($medium-screen)
+        max-width: 60%
+
+=footer
+  .footer
+    $base-spacing: .5em !default
+    $action-color: #477dca !default
+    $medium-screen: em(640) !default
+    $large-screen: em(860) !default
+    $footer-background: desaturate(darken($action-color, 20%), 30%)
+    $footer-color: white
+    $footer-link-color: transparentize($footer-color, 0.6)
+    $footer-disclaimer-color: transparentize($footer-color, 0.6)
+    background: $footer-background
+    padding: $base-spacing $gutter
+    width: 100%
+    .footer-links
+      +media($medium-screen)
+    ul
+      margin-bottom: $base-spacing
+      padding: 0
+      +media($medium-screen)
+        +clearfix
+    li
+      line-height: 1.5em
+      list-style: none
+      text-align: center
+      +media($medium-screen)
+    li a
+      color: $footer-link-color
+      text-decoration: none
+      &:focus,
+      &:hover
+        color: transparentize($footer-color, 0)
+    li h3
+      color: $footer-color
+      font-size: 1em
+      font-weight: 400
+      margin-bottom: 0.4em
+    hr
+      border: 1px solid transparentize($footer-disclaimer-color, 0.3)
+      margin: 0 auto $base-spacing
+      width: 12em
+    p
+      color: $footer-disclaimer-color
+      font-size: 0.9em
+      line-height: 1.5em
+      margin: auto
+      max-width: 35em
+      text-align: center
+  
+
 body
   margin: 0px
   background-color: #110549
@@ -8,7 +250,7 @@ body
   font-family: "Tienne", serif
   font-weight: lighter
   +grid-item-columns(12) 
-+hero-panel
++header-panel
 .content-holder
   .grid-items
     height: 100%

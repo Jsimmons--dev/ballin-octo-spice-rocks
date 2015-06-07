@@ -1,8 +1,142 @@
+mixin pageTopper(id)
+      div(id='id').header
+        .header-inner
+          .header-copy
+            h1 #{welcomeTextTitle}
+            p
+              | #{welcomeTextBody}
+            p #{yqzplug}
+          button 
+            a(href='#{yqzother}') See Other Listings 
+
+mixin gridItems(id)
+  div.content-holder
+    .grid-items
+      a.grid-item.grid-item-bigger
+        h1 !{title}
+        p !{subtitle}
+        object(data="!{extra_html}" type="text/html" style="width:100%;")
+      a.grid-item.grid-item-bigger
+        p !{descriptionTop}
+        br
+        p ...keep scrolling there are !{picsNum} pictures!{moreBelow} below!
+    div(style="margin-left:auto;margin-right:auto;" align="center")
+      !{hiddenpics}
+    .grid-items 
+      !{pics}
+      a.grid-item.grid-item-bigger
+        p !{descriptionBottom}
+        !{data_url}
+        p Estimated shipping weight, (packaged) is  !{weight}
+        br
+        p in a !{dims}
+      a.grid-item.grid-item-bigger
+        h1 #{facts}
+        p #{factss1}
+        p This is our !{years} year on eBay!
+        p #{b2}
+        p #{auctionsline} 
+        p #{b1}
+        p #{b3}
+        p #{b4}
+        p #{b5} 
+        p #{b6} 
+  
+mixin tosTop
+    .grid-items
+      a.grid-item.grid-item-bigger(href='javascript:void(0)')
+        h1 #{b7}
+        p #{b8}
+
+mixin tosGrid(id)
+    .grid-items
+      a.grid-item.grid-item-bigger
+        h1 #{b7}
+        p #{b8}
+        br
+        p #{b9}
+        br
+        p #{b10}
+        br
+        p #{b11}
+      a.grid-item.grid-item-bigger
+        h1 #{b12}
+        p #{b13}
+      a.grid-item.grid-item-bigger
+        h1 #{b14}
+        p #{b15}
+      a.grid-item.grid-item-bigger
+        h1 #{b16}
+        p #{b17}
+      a.grid-item.grid-item-bigger
+        h1 #{b18}
+        p #{b19}
+      a.grid-item.grid-item-bigger
+        h1 #{b20}
+        p #{b21}
+      a.grid-item.grid-item-bigger
+        h1 #{b22}
+        p #{b23}
+      a.grid-item.grid-item-bigger
+        h1 #{b24}
+        p #{b25}
+      a.grid-item.grid-item-bigger
+        h1 #{b26}
+        p #{b27}
+      a.grid-item.grid-item-bigger
+        h1 #{b28}
+        p #{b29}
+      a.grid-item.grid-item-bigger
+        h1 Follow Us
+      a.grid-item.grid-item-small.grid-footer-button.grid-item-link(href='http://home.estateauctionsinc.com')
+        p Home
+      a.grid-item.grid-item-small.grid-footer-button.grid-item-link(href='https://www.facebook.com/estateauctions')
+        p Facebook
+      a.grid-item.grid-item-small.grid-footer-button.grid-item-link(href='https://twitter.com/knowsebay')
+        p Twitter
+      a.grid-item.grid-item-bigger
+        small Copyright 2015. Estate Auctions Inc. YQZ Antiques. All Rights Reserved. 
+
+mixin footer
+    footer.footer(role='contentinfo')
+      .footer-logo
+      .footer-links
+
+mixin tos()
+    div.tos
+        p.title #{b7} 
+        p #{b8} 
+        p #{b9} 
+        p #{b10} 
+        p #{b11} 
+
+mixin single(className)
+    div(class= className)
+        +pageTopper('heroPanel')
+        +gridItems('importantInfo')
+        div.grid-items
+            div.traderpic.grid-item.grid-item-bigger
+                a(href="#{tradingLink}")
+                    p  #{trading}
+                br
+                img.trader(src='http://pics.ebay.com/aw/pics/trading_assistant2_88x33.gif' width=88 height=33  vspace=5)
+            div.appletC.grid-item.grid-item-bigger #{applet}
+                object( classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=6,0,0,0" width="511" height="0" id="MSCMaps" align="")
+                param(name="movie" value="http://www.mystoremaps.com/flash/MyStoreMaps/MSCMaps.swf?SELLERID=734031&MOVIEPATH=http://www.mystoremaps.com/flash/MyStoreMaps/")
+                param(name="quality" value="high")
+                param(name="bgcolor" value="#FFFFFF")
+                embed(swliveconnect="true" name="MSCMaps" src="http://www.mystoremaps.com/flash/MyStoreMaps/MSCMaps.swf?SELLERID=734031&MOVIEPATH=http://www.mystoremaps.com/flash/MyStoreMaps/" quality="high" bgcolor="#FFFFFF"  width="511" height="401" align="" type="application/x-shockwave-flash" pluginspage="http://www.macromedia.com/go/getflashplayer")
+        +tosGrid('tos')
+    +footer
+
+
+
+
 doctype html
 html
-	head
-		link(href='http://fonts.googleapis.com/css?family=Tienne:400,700' rel='stylesheet' type='text/css')
-		!{stylesheet} 
-		style #{style}
-	body
-		block content
+    head
+        link(href='http://fonts.googleapis.com/css?family=Tienne:400,700' rel='stylesheet' type='text/css')
+        !{stylesheet} 
+        style #{style}
+    body
+        mixin single('content')
